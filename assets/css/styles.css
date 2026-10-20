@@ -118,13 +118,16 @@ a:hover {
 }
 
 .main-nav a {
-  color: var(--text-muted);
   font-size: 14.5px;
   font-weight: 500;
 }
 
-.main-nav a:hover,
-.main-nav a[aria-current="page"] {
+.main-nav a:not(.btn) {
+  color: var(--text-muted);
+}
+
+.main-nav a:not(.btn):hover,
+.main-nav a:not(.btn)[aria-current="page"] {
   color: var(--text);
   text-decoration: none;
 }
