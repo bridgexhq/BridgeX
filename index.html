@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FileBird — an SSH and SFTP client in one window</title>
+  <meta name="description" content="FileBird is a desktop SSH and SFTP client: your computer on the left, your server on the right, with real terminals built in. Drag files between the panes, run commands over the same connection." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FileBird — an SSH and SFTP client in one window" />
+  <meta property="og:description" content="Your computer on the left, your server on the right. Drag files between them, and run commands on the same connection without opening another app." />
+  <meta property="og:image" content="assets/img/brand/og-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/brand/icon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 120 80" width="28" height="19" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="bm-body-h" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#1d4ed8"/>
+              <stop offset="0.6" stop-color="#38bdf8"/>
+              <stop offset="1" stop-color="#e0f2fe"/>
+            </linearGradient>
+            <linearGradient id="bm-wing-h" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#818cf8"/>
+              <stop offset="1" stop-color="#67e8f9"/>
+            </linearGradient>
+            <linearGradient id="bm-farwing-h" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2563eb"/>
+              <stop offset="1" stop-color="#312e81"/>
+            </linearGradient>
+          </defs>
+          <path d="M78 45 C70 55 57 65 37 74 C49 63 58 55 62 49 Z" fill="url(#bm-farwing-h)" transform="rotate(-23.4 78 45)"/>
+          <path d="M117 35 L106 32.5 C104 27 97.5 24.5 91.5 25.5 C86 26.5 82.5 29.5 80.5 33 C72 36 60 39.5 48 43.5 L4 34 L41 47.5 L3 57 L45 51.5 C60 55 78 53.5 91 48 C98 45 103 42 106.5 38.5 Z" fill="url(#bm-body-h)"/>
+          <g transform="translate(79 39) rotate(18) scale(1.1) translate(-79 -39)">
+            <path d="M77 38 C65 30 51 25 26 25 C40 30 52 37 58 44 Z" fill="url(#bm-body-h)" opacity="0.85" transform="rotate(-7.2 77 38)"/>
+            <path d="M83 35 C75 20 59 8 28 2 C37 8 43 13 47 17.5 C40 16.5 33 16.5 27 17.5 C43 24 56 32 64 41.5 Z" fill="url(#bm-wing-h)"/>
+          </g>
+          <circle cx="99.5" cy="31" r="1.9" fill="#0b1026"/>
+        </svg>
+        <span class="brand-name">FileBird</span>
+        <span class="brand-tag">SSH &amp; SFTP Client</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="main-nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="features.html">Features</a>
+        <a href="security.html">Security</a>
+        <a href="https://github.com/Kipngetich33/FileBird" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="download.html">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="version-pill">FileBird 0.3.2</span>
+        <h1>An SSH and SFTP client in one window.</h1>
+        <p class="hero-sub">
+          Your computer on the left, your server on the right. Drag files between
+          them, and run commands on the same connection without opening another
+          app. For developers deploying a site, teams moving backups, anyone
+          who has ever juggled an FTP client in one window and a terminal in
+          another.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="download.html">Download FileBird</a>
+          <a class="btn btn-secondary" href="https://github.com/Kipngetich33/FileBird" target="_blank" rel="noopener">View source on GitHub</a>
+        </div>
+        <div class="hero-shot">
+          <img src="assets/img/screenshots/06-connected.webp" width="1600" height="1024" alt="FileBird connected to a server, with the local computer on the left and the server's files on the right" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">What it does</span>
+          <h2>Both jobs, one window</h2>
+          <p>It does the work of an SFTP client and a terminal at once, over the single SSH connection you have already made.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Two panes, side by side</h3>
+            <p>Your computer and your server at the same time, each with its own history, selection and search.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Transfers that behave</h3>
+            <p>Drag files across, or press a button. A queue moves them three at a time, with progress, speed, cancel and retry — and never leaves a half-written file behind.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Real terminals</h3>
+            <p>A shell on the server over the connection you are already using — no second login, no second password — and shells on your own machine. Split them side by side or stacked.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Safe by default</h3>
+            <p>Passwords go to your system keychain, never to a file. Every server's identity is checked on every connection. Deletes on your own machine go to the Trash.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Nothing phones home</h3>
+            <p>No accounts, no telemetry, no update pings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">A guided tour</span>
+          <h2>Drag, drop, and run commands without leaving the window</h2>
+          <p>Three moments from the full fourteen-step tour.</p>
+        </div>
+        <div class="tour-grid">
+          <div class="tour-card">
+            <figure><img src="assets/img/screenshots/08-drag-and-drop.webp" width="1600" height="1024" alt="A folder being dragged from the server pane onto a local folder" loading="lazy" /></figure>
+            <h3>Drag files between the panes</h3>
+            <p>Drop on a folder row to go inside it, or anywhere else in the pane to use the folder on show. Dragging within the same pane moves items instead of copying.</p>
+          </div>
+          <div class="tour-card">
+            <figure><img src="assets/img/screenshots/11-terminal-split.webp" width="1600" height="1024" alt="One terminal tab divided into two shells, side by side" loading="lazy" /></figure>
+            <h3>Split the terminal</h3>
+            <p>Watch a log in one shell, work in another. Splits can be split again, each with its own scrollback and starting folder.</p>
+          </div>
+          <div class="tour-card">
+            <figure><img src="assets/img/screenshots/09-transfers.webp" width="1600" height="1024" alt="The transfer queue, with two completed downloads" loading="lazy" /></figure>
+            <h3>A queue that never leaves a mess</h3>
+            <p>Three files move at a time. Cancel one, retry a failed one — FileBird reconnects if the server dropped.</p>
+          </div>
+        </div>
+        <div class="center-link">
+          <a href="features.html">See the full guided tour →</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Security</span>
+          <h2>FileBird holds the keys to your servers, so it is built to deserve that</h2>
+        </div>
+        <ul class="check-list" style="max-width: 640px; margin: 0 auto;">
+          <li><strong>Passwords and passphrases live only in your system keychain</strong> — never in a settings file, a log, or the part of the app that draws the screen.</li>
+          <li><strong>Every server's identity is verified on every connection</strong>, and a changed key stops the connection rather than warning you after the fact.</li>
+          <li><strong>Nothing is sent anywhere.</strong> No accounts, no telemetry, no update pings — the app only ever talks to the servers you tell it to.</li>
+        </ul>
+        <div class="center-link">
+          <a href="security.html">Read more about security &amp; privacy →</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap text-center">
+        <span class="eyebrow">Get FileBird</span>
+        <h2 style="margin: 0 0 32px;">Available for macOS, Windows and Linux</h2>
+        <a class="btn btn-primary" href="download.html">Download FileBird 0.3.2</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 120 80" width="22" height="15" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="bm-body-f" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#1d4ed8"/>
+                <stop offset="0.6" stop-color="#38bdf8"/>
+                <stop offset="1" stop-color="#e0f2fe"/>
+              </linearGradient>
+              <linearGradient id="bm-wing-f" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#818cf8"/>
+                <stop offset="1" stop-color="#67e8f9"/>
+              </linearGradient>
+              <linearGradient id="bm-farwing-f" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#312e81"/>
+              </linearGradient>
+            </defs>
+            <path d="M78 45 C70 55 57 65 37 74 C49 63 58 55 62 49 Z" fill="url(#bm-farwing-f)" transform="rotate(-23.4 78 45)"/>
+            <path d="M117 35 L106 32.5 C104 27 97.5 24.5 91.5 25.5 C86 26.5 82.5 29.5 80.5 33 C72 36 60 39.5 48 43.5 L4 34 L41 47.5 L3 57 L45 51.5 C60 55 78 53.5 91 48 C98 45 103 42 106.5 38.5 Z" fill="url(#bm-body-f)"/>
+            <g transform="translate(79 39) rotate(18) scale(1.1) translate(-79 -39)">
+              <path d="M77 38 C65 30 51 25 26 25 C40 30 52 37 58 44 Z" fill="url(#bm-body-f)" opacity="0.85" transform="rotate(-7.2 77 38)"/>
+              <path d="M83 35 C75 20 59 8 28 2 C37 8 43 13 47 17.5 C40 16.5 33 16.5 27 17.5 C43 24 56 32 64 41.5 Z" fill="url(#bm-wing-f)"/>
+            </g>
+            <circle cx="99.5" cy="31" r="1.9" fill="#0b1026"/>
+          </svg>
+          <span>© 2026 Kipngetich Ngeno</span>
+        </div>
+        <p class="footer-note">
+          FileBird is proprietary, source-available software — not open source
+          or freeware. The source is published so it can be read and audited,
+          but it may not be redistributed, modified for redistribution, or
+          sold. See the
+          <a href="https://github.com/Kipngetich33/FileBird/blob/main/LICENSE" target="_blank" rel="noopener">LICENSE</a>.
+        </p>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="security.html">Security</a>
+        <a href="download.html">Download</a>
+        <a href="https://github.com/Kipngetich33/FileBird" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

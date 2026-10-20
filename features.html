@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Features — FileBird</title>
+  <meta name="description" content="A guided tour of FileBird: saved servers, host-key checking, dual-pane browsing, drag-and-drop transfers, split terminals, search, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FileBird — features &amp; guided tour" />
+  <meta property="og:description" content="Saved servers, dual-pane browsing, drag-and-drop transfers, split terminals and more." />
+  <meta property="og:image" content="assets/img/brand/og-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/brand/icon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 120 80" width="28" height="19" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="bm-body-h" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#1d4ed8"/>
+              <stop offset="0.6" stop-color="#38bdf8"/>
+              <stop offset="1" stop-color="#e0f2fe"/>
+            </linearGradient>
+            <linearGradient id="bm-wing-h" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#818cf8"/>
+              <stop offset="1" stop-color="#67e8f9"/>
+            </linearGradient>
+            <linearGradient id="bm-farwing-h" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2563eb"/>
+              <stop offset="1" stop-color="#312e81"/>
+            </linearGradient>
+          </defs>
+          <path d="M78 45 C70 55 57 65 37 74 C49 63 58 55 62 49 Z" fill="url(#bm-farwing-h)" transform="rotate(-23.4 78 45)"/>
+          <path d="M117 35 L106 32.5 C104 27 97.5 24.5 91.5 25.5 C86 26.5 82.5 29.5 80.5 33 C72 36 60 39.5 48 43.5 L4 34 L41 47.5 L3 57 L45 51.5 C60 55 78 53.5 91 48 C98 45 103 42 106.5 38.5 Z" fill="url(#bm-body-h)"/>
+          <g transform="translate(79 39) rotate(18) scale(1.1) translate(-79 -39)">
+            <path d="M77 38 C65 30 51 25 26 25 C40 30 52 37 58 44 Z" fill="url(#bm-body-h)" opacity="0.85" transform="rotate(-7.2 77 38)"/>
+            <path d="M83 35 C75 20 59 8 28 2 C37 8 43 13 47 17.5 C40 16.5 33 16.5 27 17.5 C43 24 56 32 64 41.5 Z" fill="url(#bm-wing-h)"/>
+          </g>
+          <circle cx="99.5" cy="31" r="1.9" fill="#0b1026"/>
+        </svg>
+        <span class="brand-name">FileBird</span>
+        <span class="brand-tag">SSH &amp; SFTP Client</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="features.html" aria-current="page">Features</a>
+        <a href="security.html">Security</a>
+        <a href="https://github.com/Kipngetich33/FileBird" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="download.html">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="wrap">
+        <h1>A guided tour</h1>
+        <p>Fourteen steps through the app, from opening it to deleting safely. Every screenshot below is from the running app.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="tour-step">
+          <div>
+            <div class="tour-step-num">01 · Opening FileBird</div>
+            <h3>A short animation, then the main window</h3>
+            <p>FileBird starts with a brief animation while it gets ready, then opens to the main window.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/01-start-screen.webp" width="1640" height="1040" alt="The FileBird start screen, with the bird mark and a loading bar" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step reverse">
+          <div>
+            <div class="tour-step-num">02 · Your servers</div>
+            <h3>Every saved server, with its sign-in and keychain status</h3>
+            <p>The right-hand pane lists every server you have saved, with how you sign in to each and whether its password is already in your keychain. <strong>Connect</strong> opens it, and each row also offers <strong>Edit</strong>, <strong>Delete</strong> and <strong>Forget password</strong> (or <strong>Forget passphrase</strong>, for a key). <strong>New connection</strong> adds one by hand.</p>
+            <p>If you already use <code>ssh</code> from a terminal, <strong>Import from SSH config</strong> reads your <code>~/.ssh/config</code> and lists the hosts it finds, so you can tick the ones you want rather than typing them again.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/02-saved-connections.webp" width="1600" height="1024" alt="The remote pane listing saved servers" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step">
+          <div>
+            <div class="tour-step-num">03 · Adding a server</div>
+            <h3>A name, a host, and either a password or a key</h3>
+            <p>A name, a host, a port and a username, then either a <strong>password</strong> or a <strong>private key</strong>. Choosing a key opens a file picker; FileBird reads the key only when you connect, and tells you what it found — the type, its fingerprint, and whether it needs a passphrase.</p>
+            <p>You can also use <strong>Connect without saving</strong> for a one-off server.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/03-new-connection.webp" width="1600" height="1024" alt="The new connection form" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step reverse">
+          <div>
+            <div class="tour-step-num">04 · Signing in</div>
+            <h3>Asked for at connection time, not stored in the form</h3>
+            <p>Passwords and passphrases are asked for when you connect, not stored in the form. Tick <strong>Remember</strong> and it goes into your login keychain — but only after the server has accepted it, so a typo never gets saved.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/04-password-prompt.webp" width="1600" height="1024" alt="The password prompt" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step">
+          <div>
+            <div class="tour-step-num">05 · Checking the server</div>
+            <h3>Trusted on first use, after you've seen the fingerprint</h3>
+            <p>The first time you reach a server, FileBird shows you its fingerprint before trusting anything, and refuses to continue until you confirm. From then on that key is checked on every connection.</p>
+            <p>If a known server's key ever changes, FileBird stops and tells you. There is no "connect anyway" button, because a changed key is exactly what a machine in the middle of your connection would look like.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/05-host-key.webp" width="1600" height="1024" alt="The host key prompt showing the server's fingerprint" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step reverse">
+          <div>
+            <div class="tour-step-num">06 · Two panes</div>
+            <h3>Local on the left, the server on the right</h3>
+            <p>The pane you last clicked is the <strong>active</strong> one — it has a brighter border, and menu commands and shortcuts act on it. <code>Cmd/Ctrl+1</code> and <code>Cmd/Ctrl+2</code> jump between them, and the divider in the middle drags to give one side more room. FileBird remembers where you left it.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/06-connected.webp" width="1600" height="1024" alt="Both panes, local and remote, connected" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step">
+          <div>
+            <div class="tour-step-num">07 · Browsing</div>
+            <h3>Back, parent folder, refresh, new folder, search</h3>
+            <p>Click a folder to open it. Each pane has <strong>Back</strong>, <strong>Parent folder</strong>, <strong>Refresh</strong>, <strong>New folder</strong> and <strong>Search</strong> in its toolbar, and the footer counts what is in view and what you have selected.</p>
+            <p><code>Cmd</code>-click (<code>Ctrl</code> on Windows and Linux) adds to the selection; <code>Shift</code>-click extends it; <code>Cmd/Ctrl+A</code> selects everything. Hidden files are shown but dimmed. A folder that takes a moment to open says <strong>Opening…</strong> rather than looking stuck.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/07-browsing.webp" width="1600" height="1024" alt="Folders open on both sides" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step reverse">
+          <div>
+            <div class="tour-step-num">08 · Copying files: drag and drop</div>
+            <h3>Drop on a row to go inside it</h3>
+            <p>Drag a file or folder from one pane to the other. The label at the bottom names exactly where it will land — drop it on a folder row to go inside that folder, or anywhere else in the pane to use the folder on show.</p>
+            <p>Dragging within the <em>same</em> pane <strong>moves</strong> items into a folder instead. Prefer buttons? Select what you want and press <strong>Upload</strong> or <strong>Download</strong> (<code>Cmd/Ctrl+T</code>).</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/08-drag-and-drop.webp" width="1600" height="1024" alt="A folder being dragged from the server onto a local folder" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step">
+          <div>
+            <div class="tour-step-num">09 · The transfer queue</div>
+            <h3>Three at a time, with progress, speed and retry</h3>
+            <p>Every transfer joins a queue at the bottom of the window: three files move at a time, each with its own progress and speed. You can <strong>Cancel</strong> one, <strong>Retry</strong> a failed one — FileBird reconnects if the server dropped — and filter by <strong>Active</strong>, <strong>Completed</strong> or <strong>Failed</strong>.</p>
+            <p>Nothing is ever half-written under a real name, and nothing is overwritten unless you say so: a name that already exists asks once for the whole batch — <strong>Replace</strong>, <strong>Keep both</strong> or <strong>Skip</strong>.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/09-transfers.webp" width="1600" height="1024" alt="The transfers panel with completed downloads" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step reverse">
+          <div>
+            <div class="tour-step-num">10 · The terminal</div>
+            <h3>No second login, no second password</h3>
+            <p>Each pane has a <strong>Terminal</strong> tab (<code>Cmd/Ctrl+\`</code>). On the server side it opens a shell over the connection you already have — no second login, no second password, no second host-key question. On your own side it opens a shell on your machine.</p>
+            <p>It is a real terminal, so <code>sudo</code>, <code>vim</code>, <code>top</code> and anything else full-screen work normally.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/10-terminal.webp" width="1600" height="1024" alt="A shell running on the server beside the file list" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step">
+          <div>
+            <div class="tour-step-num">11 · Splitting the terminal</div>
+            <h3>Side by side, or stacked, nested as deeply as you like</h3>
+            <p><strong>Split Vertically</strong> (<code>Cmd/Ctrl+D</code>) puts two shells side by side; <strong>Split Horizontally</strong> (<code>Cmd/Ctrl+Shift+D</code>) puts one above the other. <strong>Add Tab</strong> (<code>Cmd/Ctrl+Shift+T</code>) starts another terminal tab.</p>
+            <p>A pane runs up to eight shells on your own machine and four on a server — a server allows only so many channels on one connection, and FileBird leaves room for your transfers.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/11-terminal-split.webp" width="1600" height="1024" alt="One terminal tab divided into two shells" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step reverse">
+          <div>
+            <div class="tour-step-num">12 · Finding a file</div>
+            <h3>The list narrows as you type</h3>
+            <p>Press <code>Cmd/Ctrl+F</code> or click the magnifier and the list narrows as you type. The footer keeps count ("3 of 128 items"). <code>Enter</code> hands the list back to the keyboard with the first match selected, <code>Escape</code> clears it, and opening another folder starts fresh.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/12-search.webp" width="1600" height="1024" alt="Searching a folder" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step">
+          <div>
+            <div class="tour-step-num">13 · Making and renaming things</div>
+            <h3>Checked as you type, before the server refuses</h3>
+            <p><strong>New folder</strong> sits in each pane's toolbar (<code>Cmd/Ctrl+Shift+N</code>), and <code>F2</code> renames whatever is selected. Names are checked as you type against the rules of the side you are on. A rename never replaces something that already exists.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/13-new-folder.webp" width="1600" height="1024" alt="The new folder dialog" loading="lazy" /></div>
+        </div>
+
+        <div class="tour-step reverse">
+          <div>
+            <div class="tour-step-num">14 · Deleting safely</div>
+            <h3>Local goes to the Trash; remote is permanent</h3>
+            <p><code>Delete</code> (or <code>Cmd+Backspace</code> on a Mac) removes what is selected, after asking. On your own machine, items go to the <strong>Trash</strong>, where you can get them back — FileBird never deletes local files permanently. On a server there is no Trash, so deleting really is permanent, and the question says so plainly.</p>
+            <p>Your home folder, the drive's root and any folder containing them are refused outright, on either side.</p>
+          </div>
+          <div class="tour-step-media"><img src="assets/img/screenshots/14-delete.webp" width="1600" height="1024" alt="The confirmation before deleting a local file" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">In full</span>
+          <h2>Everything FileBird does</h2>
+        </div>
+        <div class="list-columns">
+          <div>
+            <h3>Connecting</h3>
+            <ul class="check-list">
+              <li>Saved servers with password or private-key sign-in (<code>ed25519</code>, <code>rsa</code>, <code>ecdsa</code>).</li>
+              <li>Passwords and passphrases in the OS keychain, saved only after they work.</li>
+              <li>One-way import from <code>~/.ssh/config</code>, including <code>IdentityFile</code>.</li>
+              <li>Server identities trusted on first use; a changed key is a hard stop.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Files</h3>
+            <ul class="check-list">
+              <li>Two independent panes, each with its own history, selection, search and zoom.</li>
+              <li>Hidden files shown and dimmed; links marked; broken links obvious.</li>
+              <li>Per-pane zoom from 75% to 200%, remembered between runs.</li>
+              <li>New folder, rename, delete, and move by dragging within a pane.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Transfers</h3>
+            <ul class="check-list">
+              <li>Files and whole folder trees, in both directions.</li>
+              <li>A queue: three at a time, progress, speed, cancel, retry that reconnects.</li>
+              <li>Conflicts asked once per batch: Replace, Keep both, Skip.</li>
+              <li>Safe writes — an interrupted transfer never leaves a half-file under the real name.</li>
+              <li>Quitting with transfers running asks first.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Terminals</h3>
+            <ul class="check-list">
+              <li>A shell per pane, as tabs; up to eight locally, four per server.</li>
+              <li>Split side by side or stacked, nested as deeply as you like.</li>
+              <li>Remote shells run over the existing connection; local ones are real pseudo-terminals.</li>
+              <li>Output is throttled, and nothing a terminal shows is ever written to a log.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Reference</span>
+          <h2>Keyboard shortcuts</h2>
+        </div>
+        <div class="table-wrap" style="max-width: 720px; margin: 0 auto;">
+          <table>
+            <tbody>
+              <tr><td><kbd>Cmd/Ctrl+1</kbd> / <kbd>Cmd/Ctrl+2</kbd></td><td>Focus the local / remote pane</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+R</kbd></td><td>Refresh</td></tr>
+              <tr><td><kbd>Cmd+[</kbd> / <kbd>Alt+Left</kbd></td><td>Back</td></tr>
+              <tr><td><kbd>Cmd+↑</kbd> / <kbd>Alt+Up</kbd></td><td>Parent folder</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+T</kbd></td><td>Transfer the selection to the other side</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+F</kbd></td><td>Search this folder</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+A</kbd></td><td>Select all</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+Shift+N</kbd></td><td>New folder</td></tr>
+              <tr><td><kbd>F2</kbd></td><td>Rename</td></tr>
+              <tr><td><kbd>Delete</kbd> / <kbd>Cmd+Backspace</kbd></td><td>Delete</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+`</kbd></td><td>Switch between Files and Terminal</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+Shift+T</kbd></td><td>Add a terminal tab</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+D</kbd></td><td>Split the terminal vertically (side by side)</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+Shift+D</kbd></td><td>Split the terminal horizontally (one above the other)</td></tr>
+              <tr><td><kbd>Cmd/Ctrl+=</kbd> / <kbd>Cmd/Ctrl+-</kbd> / <kbd>Cmd/Ctrl+0</kbd></td><td>Zoom this pane in / out / back to 100%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 120 80" width="22" height="15" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="bm-body-f" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#1d4ed8"/>
+                <stop offset="0.6" stop-color="#38bdf8"/>
+                <stop offset="1" stop-color="#e0f2fe"/>
+              </linearGradient>
+              <linearGradient id="bm-wing-f" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#818cf8"/>
+                <stop offset="1" stop-color="#67e8f9"/>
+              </linearGradient>
+              <linearGradient id="bm-farwing-f" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#312e81"/>
+              </linearGradient>
+            </defs>
+            <path d="M78 45 C70 55 57 65 37 74 C49 63 58 55 62 49 Z" fill="url(#bm-farwing-f)" transform="rotate(-23.4 78 45)"/>
+            <path d="M117 35 L106 32.5 C104 27 97.5 24.5 91.5 25.5 C86 26.5 82.5 29.5 80.5 33 C72 36 60 39.5 48 43.5 L4 34 L41 47.5 L3 57 L45 51.5 C60 55 78 53.5 91 48 C98 45 103 42 106.5 38.5 Z" fill="url(#bm-body-f)"/>
+            <g transform="translate(79 39) rotate(18) scale(1.1) translate(-79 -39)">
+              <path d="M77 38 C65 30 51 25 26 25 C40 30 52 37 58 44 Z" fill="url(#bm-body-f)" opacity="0.85" transform="rotate(-7.2 77 38)"/>
+              <path d="M83 35 C75 20 59 8 28 2 C37 8 43 13 47 17.5 C40 16.5 33 16.5 27 17.5 C43 24 56 32 64 41.5 Z" fill="url(#bm-wing-f)"/>
+            </g>
+            <circle cx="99.5" cy="31" r="1.9" fill="#0b1026"/>
+          </svg>
+          <span>© 2026 Kipngetich Ngeno</span>
+        </div>
+        <p class="footer-note">
+          FileBird is proprietary, source-available software — not open source
+          or freeware. The source is published so it can be read and audited,
+          but it may not be redistributed, modified for redistribution, or
+          sold. See the
+          <a href="https://github.com/Kipngetich33/FileBird/blob/main/LICENSE" target="_blank" rel="noopener">LICENSE</a>.
+        </p>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="security.html">Security</a>
+        <a href="download.html">Download</a>
+        <a href="https://github.com/Kipngetich33/FileBird" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
