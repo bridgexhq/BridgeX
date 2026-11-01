@@ -1,9 +1,7 @@
 // Download links for the current release.
 //
-// TODO(release): the v0.4.0 GitHub Release has not been published yet, so
-// nothing at RELEASE_BASE_URL exists and every link below 404s. Flip
-// RELEASE_PUBLISHED to true only after the release is live at that URL.
-const RELEASE_PUBLISHED = false;
+// The v0.4.0 GitHub Release (bridgexhq/BridgeX, macOS only) is live.
+const RELEASE_PUBLISHED = true;
 
 const RELEASE_VERSION = "0.4.0";
 // Releases live in this website's own repo, not the app's source repo, so a
