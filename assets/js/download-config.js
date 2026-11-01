@@ -17,7 +17,7 @@ const RELEASE_FILES = {
 };
 
 // Download counts come straight from GitHub's own per-asset counter via its
-// public REST API — no tracker, no cookies, nothing collected about the
+// public REST API - no tracker, no cookies, nothing collected about the
 // visitor. Cached in sessionStorage for 10 minutes so repeat page views in
 // the same visit don't refetch.
 const DOWNLOAD_COUNT_CACHE_KEY = "filebird-download-counts-v1";
@@ -33,7 +33,7 @@ async function fetchDownloadCounts() {
       }
     }
   } catch {
-    // sessionStorage unavailable (private browsing, etc.) — just refetch.
+    // sessionStorage unavailable (private browsing, etc.) - just refetch.
   }
 
   const response = await fetch(
@@ -55,7 +55,7 @@ async function fetchDownloadCounts() {
       JSON.stringify({ fetchedAt: Date.now(), counts }),
     );
   } catch {
-    // Ignore storage failures — the count still renders for this page view.
+    // Ignore storage failures - the count still renders for this page view.
   }
 
   return counts;
@@ -71,7 +71,7 @@ function renderDownloadCounts(counts) {
     const count = formatted[key];
     if (count === undefined) return;
     el.textContent = el.textContent.replace(
-      "—",
+      "-",
       `${count.toLocaleString()}`,
     );
     el.hidden = false;
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchDownloadCounts()
       .then(renderDownloadCounts)
       .catch(() => {
-        // No network, API down, or rate-limited — counters just stay hidden.
+        // No network, API down, or rate-limited - counters just stay hidden.
       });
   }
   const banner = document.querySelector("[data-release-banner]");

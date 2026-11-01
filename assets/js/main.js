@@ -1,4 +1,4 @@
-// FileBird site — shared behaviour. No analytics, no tracking, no network calls.
+// BridgeX site - shared behaviour. No analytics, no tracking, no network calls.
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".nav-toggle");
