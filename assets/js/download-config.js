@@ -6,7 +6,9 @@
 const RELEASE_PUBLISHED = false;
 
 const RELEASE_VERSION = "0.4.0";
-const RELEASE_REPO = "Kipngetich33/FileBird";
+// Releases live in this website's own repo, not the app's source repo, so a
+// download never points visitors at the proprietary source.
+const RELEASE_REPO = "bridgexhq/BridgeX";
 const RELEASE_BASE_URL = `https://github.com/${RELEASE_REPO}/releases/download/v${RELEASE_VERSION}`;
 
 // Windows and Linux builds for this version don't exist yet (only macOS has
