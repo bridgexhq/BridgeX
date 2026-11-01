@@ -1,26 +1,28 @@
 // Download links for the current release.
 //
-// TODO(release): the v0.3.2 GitHub Release has not been published yet, so
+// TODO(release): the v0.4.0 GitHub Release has not been published yet, so
 // nothing at RELEASE_BASE_URL exists and every link below 404s. Flip
 // RELEASE_PUBLISHED to true only after the release is live at that URL.
 const RELEASE_PUBLISHED = false;
 
-const RELEASE_VERSION = "0.3.2";
+const RELEASE_VERSION = "0.4.0";
 const RELEASE_REPO = "Kipngetich33/FileBird";
 const RELEASE_BASE_URL = `https://github.com/${RELEASE_REPO}/releases/download/v${RELEASE_VERSION}`;
 
+// Windows and Linux builds for this version don't exist yet (only macOS has
+// been rebuilt since the BridgeX rename), so they're deliberately left out
+// here - any [data-download] key not listed below renders as "Coming soon"
+// rather than a dead link, regardless of RELEASE_PUBLISHED.
 const RELEASE_FILES = {
-  "mac-arm64": "FileBird-0.3.2-mac-arm64.dmg",
-  "mac-x64": "FileBird-0.3.2-mac-x64.dmg",
-  "win-x64": "FileBird-0.3.2-win-x64-setup.exe",
-  "linux-x86_64": "FileBird-0.3.2-linux-x86_64.AppImage",
+  "mac-arm64": "BridgeX-0.4.0-mac-arm64.dmg",
+  "mac-x64": "BridgeX-0.4.0-mac-x64.dmg",
 };
 
 // Download counts come straight from GitHub's own per-asset counter via its
 // public REST API - no tracker, no cookies, nothing collected about the
 // visitor. Cached in sessionStorage for 10 minutes so repeat page views in
 // the same visit don't refetch.
-const DOWNLOAD_COUNT_CACHE_KEY = "filebird-download-counts-v1";
+const DOWNLOAD_COUNT_CACHE_KEY = "bridgex-download-counts-v2";
 const DOWNLOAD_COUNT_CACHE_TTL_MS = 10 * 60 * 1000;
 
 async function fetchDownloadCounts() {
@@ -94,7 +96,15 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-download]").forEach((el) => {
     const key = el.getAttribute("data-download");
     const file = key && RELEASE_FILES[key];
-    if (!file) return;
+
+    if (!file) {
+      el.setAttribute("href", "#");
+      el.setAttribute("aria-disabled", "true");
+      el.classList.add("is-disabled");
+      el.addEventListener("click", (event) => event.preventDefault());
+      el.textContent = "Coming soon";
+      return;
+    }
 
     if (RELEASE_PUBLISHED) {
       el.setAttribute("href", `${RELEASE_BASE_URL}/${file}`);
